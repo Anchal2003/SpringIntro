@@ -32,4 +32,12 @@ public class MessageController {
         //Return the result
         return "Hello " + name + " from BridgeLabz!";
     }
+
+    //Use @PostMapping Annotation with parameter
+    @PostMapping("/post")
+    //Create a method to handle the POST request
+    public String sayHello(@RequestBody User user) {
+        //return the response of post request
+        return "Hello " + user.getFirstName() + " " + user.getLastName() + "!";
+    }
 }
